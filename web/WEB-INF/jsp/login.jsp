@@ -30,6 +30,8 @@ Login
     密码：<input id="user_password" name="user_password" type="text"><br/>
     <input type="submit" value="登录">
 </form>
+<a href="${pageContext.request.contextPath}/toUpdateUser">haha</a>
+
 </body>
 </html>
 

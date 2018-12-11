@@ -1,6 +1,7 @@
 package com.itheima.core.controller;
 
 import com.itheima.core.po.User;
+import com.itheima.core.service.ClassService;
 import com.itheima.core.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -9,11 +10,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 @Controller
 public class UserController {
     @Autowired
     UserService userService;
+    @Autowired
+    ClassService classService;
     @RequestMapping(value = "/login",method = RequestMethod.POST)
     public String login(String user_code, String user_password, Model model, HttpSession httpSession){
         User user=userService.findUser(user_code,user_password);
@@ -24,6 +28,9 @@ public class UserController {
             httpSession.setAttribute("User",user);
             return "student";
         }
+        List classes=classService.selectAllClass();
+        model.addAttribute("ClassList",classes);
+        System.out.println(classes);
         httpSession.setAttribute("User",user);
         return "teacher";
     }

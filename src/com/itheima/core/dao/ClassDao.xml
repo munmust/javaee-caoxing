@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itheima.core.dao.ClassDao">
+    <select id="selectAllClass" resultType="ClassList">
+        select * from class
+    </select>
+    <select id="getClassByName" parameterType="String" resultType="ClassList">
+        select * from class where class_name=#{name}
+    </select>
+    <insert id="addClass" parameterType="ClassList">
+        insert into class(class_name,class_des,create_user_id,create_user_name,create_time,end_time)
+        VALUES (#{class_name,},#{class_des},#{create_user_id},#{create_user_name},#{create_time},#{end_time})
+    </insert>
+    <insert id="addUser_Class" parameterType="User_Class" >
+        insert into user_class(user_id,class_id,user_class_type)
+        values (#{user_id},#{class_id},#{user_class_type})
+    </insert>
+</mapper>

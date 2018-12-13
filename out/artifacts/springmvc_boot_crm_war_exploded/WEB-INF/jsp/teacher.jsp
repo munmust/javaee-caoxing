@@ -26,7 +26,6 @@
     <style>
         .Class_list{
             display: flex;
-
         }
     </style>
 </head>
@@ -43,6 +42,11 @@
 </div>
 <a href="#" class="btn btn-primary" data-toggle="modal"
    data-target="#newCustomerDialog">新建</a>
+
+
+
+
+
 <div class="modal fade" id="newCustomerDialog" tabindex="-1" role="dialog"
      aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
@@ -54,15 +58,7 @@
                 <h4 class="modal-title" id="myModalLabels">新建课程信息</h4>
             </div>
             <div class="modal-body">
-                <form class="form-horizontal" id="new_customer_form">
-                    <div class="form-group">
-                        <label for="new_classId" class="col-sm-2 control-label">
-                            课程编号
-                        </label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="new_classId" placeholder="课程编号" name="class_id" />
-                        </div>
-                    </div>
+                <form class="form-horizontal" id="new_customer_form" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="new_className" class="col-sm-2 control-label">
                             课程名称
@@ -79,7 +75,14 @@
                             <input type="text" class="form-control" id="new_classDes" placeholder="课程简介" name="class_des" />
                         </div>
                     </div>
-
+                    <div class="form-group">
+                        <label for="new_img" class="col-sm-2 control-label">
+                            上传课程图片
+                        </label>
+                        <div class="col-sm-10">
+                            <input type="file" class="form-control" id="new_img" placeholder="课程照片上传" name="class_img" multiple="multiple" />
+                        </div>
+                    </div>
                 </form>
             </div>
             <div class="modal-footer">
@@ -106,3 +109,4 @@
 </script>
 </body>
 </html>
+    `

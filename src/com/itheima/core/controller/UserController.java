@@ -1,5 +1,6 @@
 package com.itheima.core.controller;
 
+import com.itheima.core.po.ClassList;
 import com.itheima.core.po.User;
 import com.itheima.core.service.ClassService;
 import com.itheima.core.service.UserService;
@@ -19,8 +20,10 @@ public class UserController {
     @Autowired
     ClassService classService;
     @RequestMapping(value = "/login",method = RequestMethod.POST)
-    public String login(String user_code, String user_password, Model model, HttpSession httpSession){
+    public String login(String user_code,String user_password,Model model,HttpSession httpSession){
         User user=userService.findUser(user_code,user_password);
+        List<ClassList> classLists=classService.selectAllClass(user.getUser_id());
+        System.out.println(classLists);
         if (user==null){
             model.addAttribute("error","账号或密码错误");
             return "login";
@@ -28,9 +31,7 @@ public class UserController {
             httpSession.setAttribute("User",user);
             return "student";
         }
-        List classes=classService.selectAllClass();
-        model.addAttribute("ClassList",classes);
-        System.out.println(classes);
+        model.addAttribute("ClassList",classLists);
         httpSession.setAttribute("User",user);
         return "teacher";
     }

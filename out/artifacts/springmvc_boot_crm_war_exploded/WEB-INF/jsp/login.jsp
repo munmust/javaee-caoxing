@@ -68,7 +68,7 @@
 
 <div class="container">
     <form action="${pageContext.request.contextPath}/login" method="post" onsubmit="check()">
-        <p><span id="message">${msg}</span></p>
+        <p><span id="message">${error}</span></p>
         <div class="form row">
             <div class="form-horizontal col-md-offset-3" id="login_form">
                 <h3 class="form-title">登录</h3>

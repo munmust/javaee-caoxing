@@ -3,14 +3,13 @@ package com.itheima.core.po;
 import java.util.Date;
 
 public class ClassList {
-    private int class_id;
-    private String class_name;
-    private String class_des;
-    private User user;
-    private int create_user_id;
-    private String create_user_name;
-    private Date create_time;
-    private Date end_time;
+private int class_id;
+private String class_name;
+private String Class_des;
+private int create_user_id;
+private String create_user_name;
+private Date create_time;
+private String class_img;
 
     public int getClass_id() {
         return class_id;
@@ -29,19 +28,11 @@ public class ClassList {
     }
 
     public String getClass_des() {
-        return class_des;
+        return Class_des;
     }
 
     public void setClass_des(String class_des) {
-        this.class_des = class_des;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
+        Class_des = class_des;
     }
 
     public int getCreate_user_id() {
@@ -68,12 +59,12 @@ public class ClassList {
         this.create_time = create_time;
     }
 
-    public Date getEnd_time() {
-        return end_time;
+    public String getClass_img() {
+        return class_img;
     }
 
-    public void setEnd_time(Date end_time) {
-        this.end_time = end_time;
+    public void setClass_img(String class_img) {
+        this.class_img = class_img;
     }
 
     @Override
@@ -81,11 +72,11 @@ public class ClassList {
         return "ClassList{" +
                 "class_id=" + class_id +
                 ", class_name='" + class_name + '\'' +
-                ", class_des='" + class_des + '\'' +
+                ", Class_des='" + Class_des + '\'' +
                 ", create_user_id=" + create_user_id +
-                ", create_user_nam='" + create_user_name + '\'' +
+                ", create_user_name='" + create_user_name + '\'' +
                 ", create_time=" + create_time +
-                ", end_time=" + end_time +
+                ", class_img='" + class_img + '\'' +
                 '}';
     }
 }

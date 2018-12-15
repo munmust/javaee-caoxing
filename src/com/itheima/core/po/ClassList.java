@@ -1,5 +1,7 @@
 package com.itheima.core.po;
 
+import org.springframework.web.multipart.MultipartFile;
+
 import java.util.Date;
 
 public class ClassList {
@@ -10,6 +12,7 @@ private int create_user_id;
 private String create_user_name;
 private Date create_time;
 private String class_img;
+private MultipartFile img;
 
     public int getClass_id() {
         return class_id;
@@ -65,6 +68,14 @@ private String class_img;
 
     public void setClass_img(String class_img) {
         this.class_img = class_img;
+    }
+
+    public MultipartFile getImg() {
+        return img;
+    }
+
+    public void setImg(MultipartFile img) {
+        this.img = img;
     }
 
     @Override

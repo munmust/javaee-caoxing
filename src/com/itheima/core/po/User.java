@@ -5,6 +5,43 @@ public class User {
     private String user_code;
     private String user_password;
     private String user_name;
+    private String user_cls;
+    private Integer start;
+    private Integer rows;
+    private Integer linkClass;
+
+    public Integer getLinkClass() {
+        return linkClass;
+    }
+
+    public void setLinkClass(Integer linkClass) {
+        this.linkClass = linkClass;
+    }
+
+    public Integer getStart() {
+        return start;
+    }
+
+    public void setStart(Integer start) {
+        this.start = start;
+    }
+
+    public Integer getRows() {
+        return rows;
+    }
+
+    public void setRows(Integer rows) {
+        this.rows = rows;
+    }
+
+    public String getUser_cls() {
+        return user_cls;
+    }
+
+    public void setUser_cls(String user_cls) {
+        this.user_cls = user_cls;
+    }
+
     private int user_type;
 
     public int getUser_id() {
@@ -54,6 +91,7 @@ public class User {
                 ", user_code='" + user_code + '\'' +
                 ", user_password='" + user_password + '\'' +
                 ", user_name='" + user_name + '\'' +
+                ", user_cls='" + user_cls + '\'' +
                 ", user_type=" + user_type +
                 '}';
     }

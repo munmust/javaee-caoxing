@@ -22,15 +22,17 @@ public class UserController {
     @RequestMapping(value = "/login",method = RequestMethod.POST)
     public String login(String user_code,String user_password,Model model,HttpSession httpSession){
         User user=userService.findUser(user_code,user_password);
-        List<ClassList> classLists=classService.selectAllClass(user.getUser_id());
-        System.out.println(classLists);
         if (user==null){
             model.addAttribute("error","账号或密码错误");
             return "login";
         }else if (user.getUser_type()==1){
+            List<ClassList> classLists=classService.selectAllClass(user.getUser_id());
+            System.out.println(classLists);
             httpSession.setAttribute("User",user);
             return "student";
         }
+        List<ClassList> classLists=classService.selectAllClass(user.getUser_id());
+        System.out.println(classLists);
         model.addAttribute("ClassList",classLists);
         httpSession.setAttribute("User",user);
         return "teacher";

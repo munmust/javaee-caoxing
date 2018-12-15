@@ -2,6 +2,19 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.itheima.core.dao.UserDao">
+    <sql id="selectStudentListWhere">
+        <where>
+            <if test="user_code !=null">
+                user_code like "%"#{user_code}"%"
+            </if>
+            <if test="user_name !=null">
+                and user_name=#{user_name}
+            </if>
+            <if test="user_cls !=null">
+                and user_cls=#{user_cls}
+            </if>
+        </where>
+    </sql>
     <select id="findUser" parameterType="String" resultType="User">
         select *
         from user
@@ -12,4 +25,30 @@
     <update id="updateUser" parameterType="User">
         update user set user_password=#{user_password} where user_code=#{user_code}
     </update>
+
+
+
+    <select id="selectAllStudent" parameterType="User" resultType="User">
+    select
+     user_id,
+     user_code,
+     user_name,
+     user_cls
+     from user where user_type=1 and user_id in (select user_id from user_class where class_id=#{linkClass})
+     <include refid="selectStudentListWhere"/>
+        <if test="start !=null and rows != null">
+            limit #{start},#{rows}
+        </if>
+    </select>
+
+
+
+    <select id="selectStudentListCount" resultType="Integer">
+        select count(*) from user where user_type=1
+        <include refid="selectStudentListWhere"/>
+    </select>
+
+    <select id="finUserByCode" parameterType="String" resultType="User">
+        select * from user where user_code=#{user_code}
+    </select>
 </mapper>

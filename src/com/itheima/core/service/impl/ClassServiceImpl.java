@@ -33,4 +33,14 @@ public class ClassServiceImpl implements ClassService {
     public int addUser_Class(User_Class user_class) {
        return classDao.addUser_Class(user_class);
     }
+
+    @Override
+    public ClassList findClassById(int class_id) {
+        return classDao.findClassById(class_id);
+    }
+
+    @Override
+    public int addStudentToClass(User_Class user_class) {
+        return classDao.addStudentToClass(user_class);
+    }
 }

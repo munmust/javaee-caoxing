@@ -11,4 +11,8 @@ public interface ClassService {
     public int addClass(ClassList classList);
     public ClassList findClassByDate(Date create_time);
     public int addUser_Class(User_Class user_class);
+
+    public ClassList findClassById(int class_id);
+
+    public int addStudentToClass(User_Class user_class);
 }

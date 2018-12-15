@@ -14,4 +14,11 @@
     <insert id="addUser_Class" parameterType="User_Class" >
         insert into user_class(user_id,class_id,user_class_type) values (#{user_id},#{class_id},#{user_class_type})
     </insert>
+
+    <select id="findClassById" parameterType="int" resultType="ClassList">
+        select * from class where class_id=#{class_id}
+    </select>
+    <insert id="addStudentToClass" parameterType="User_Class">
+        insert into user_class(user_id,class_id,user_class_type) values (#{user_id},#{class_id},1)
+    </insert>
 </mapper>

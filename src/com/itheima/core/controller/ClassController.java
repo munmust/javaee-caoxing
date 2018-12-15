@@ -92,11 +92,11 @@ public class ClassController {
         model.addAttribute("Class",classList);
         int linkClass=classList.getClass_id();
         Page<User> userPage=userService.selectAllStudent(page,rows,user_code,user_name,user_cls,linkClass);
-        System.out.println(userPage);
-        model.addAttribute("page",userPage);
+        Page<User> notInClass=userService.selectNotInClassStudent(page,rows,user_code,user_name,user_cls,linkClass);
+        model.addAttribute("Student",userPage);
+        model.addAttribute("NotInClass",notInClass);
         return "Class/classDetail";
     }
-
     @RequestMapping("/addStudentToClass")
     @ResponseBody
     public String addStudentToClass(Integer id,HttpSession httpSession){

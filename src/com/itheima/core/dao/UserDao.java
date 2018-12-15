@@ -11,4 +11,6 @@ public interface UserDao {
     public void updateUser(User user);
     public List<User> selectAllStudent(User user);
     public Integer selectStudentListCount(User user);
+    public List<User> selectNotInClassStudent(User user);
+    public Integer selectNotInClassStudentCount(User user);
 }

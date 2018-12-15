@@ -15,6 +15,8 @@ public interface UserService {
     public Page<User> selectAllStudent(Integer page,Integer rows,
                                        String user_code,String user_name,
                                        String user_cls,int linkClass);
-
+    public Page<User> selectNotInClassStudent(Integer page,Integer rows,
+                                              String user_code,String user_name,
+                                              String user_cls,int linkClass);
 
 }

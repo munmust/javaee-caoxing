@@ -60,5 +60,32 @@ public class UserServiceImpl implements UserService {
         return result;
     }
 
+    @Override
+    public Page<User> selectNotInClassStudent(Integer page, Integer rows, String user_code, String user_name, String user_cls, int linkClass) {
+        User user=new User();
+        if (StringUtils.isNotBlank(user_code)){
+            user.setUser_code(user_code);
+        }
+        if (StringUtils.isNotBlank(user_name)){
+            user.setUser_name(user_name);
+        }
+        if (StringUtils.isNotBlank(user_cls)){
+            user.setUser_cls(user_cls);
+        }
+        user.setStart((page-1)*rows);
+        user.setRows(rows);
+        user.setLinkClass(linkClass);
+        List<User> users=userDao.selectNotInClassStudent(user);
+        System.out.println("NotInClass"+users);
+        Integer count=userDao.selectNotInClassStudentCount(user);
+        System.out.println(count);
+        Page<User> result=new Page<>();
+        result.setPage(page);
+        result.setRows(users);
+        result.setSize(rows);
+        result.setTotal(count);
+        return result;
+    }
+
 
 }

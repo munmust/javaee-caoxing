@@ -64,7 +64,13 @@
       from user where user_type=1 and user_id not in (select user_id from user_class where class_id=#{linkClass})
 </select>
 
+
     <select id="finUserByCode" parameterType="String" resultType="User">
         select * from user where user_code=#{user_code}
+    </select>
+
+
+    <select id="findUserById" parameterType="int" resultType="User">
+        select * from user where user_id=#{user_id}
     </select>
 </mapper>

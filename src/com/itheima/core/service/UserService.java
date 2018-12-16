@@ -11,6 +11,7 @@ import java.util.List;
 public interface UserService {
     public User findUser(String user_code,String user_password);
     public User finUserByCode(String user_code);
+    public User findUserById(int user_id);
     public void updateUser(User user);
     public Page<User> selectAllStudent(Integer page,Integer rows,
                                        String user_code,String user_name,

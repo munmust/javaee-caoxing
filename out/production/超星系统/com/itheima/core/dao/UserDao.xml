@@ -40,15 +40,37 @@
             limit #{start},#{rows}
         </if>
     </select>
-
-
-
     <select id="selectStudentListCount" resultType="Integer">
-        select count(*) from user where user_type=1
+        select count(*) from user where user_type=1 and user_id in (select user_id from user_class where class_id=#{linkClass})
         <include refid="selectStudentListWhere"/>
     </select>
 
+
+
+<select id="selectNotInClassStudent" parameterType="User" resultType="User">
+    select
+     user_id,
+     user_code,
+     user_name,
+     user_cls
+     from user where user_type=1 and user_id not in (select user_id from user_class where class_id=#{linkClass})
+  <include refid="selectStudentListWhere"/>
+    <if test="start !=null and rows != null">
+        limit #{start},#{rows}
+    </if>
+</select>
+<select id="selectNotInClassStudentCount" parameterType="User" resultType="Integer">
+     select count(*)
+      from user where user_type=1 and user_id not in (select user_id from user_class where class_id=#{linkClass})
+</select>
+
+
     <select id="finUserByCode" parameterType="String" resultType="User">
         select * from user where user_code=#{user_code}
+    </select>
+
+
+    <select id="findUserById" parameterType="int" resultType="User">
+        select * from user where user_id=#{user_id}
     </select>
 </mapper>

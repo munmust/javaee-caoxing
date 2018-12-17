@@ -347,11 +347,22 @@
                         </c:choose></span>
                         <p style="float:none;" class="clearfix">
                             <a class="Btn_blue_1" href="#">
-                                <span onclick="updateHomeWorkType(${item.homework_id},${item.homework_type})">
+                                <span  onclick="updateHomeWorkType(${item.homework_id})">
                                     <c:choose>
                                     <c:when test="${item.homework_type eq 0}">发布</c:when>
-                                    <c:otherwise>修改</c:otherwise>
+                                    <c:otherwise >已发布</c:otherwise>
                                 </c:choose></span>
+                            </a>
+                            <a class="Btn_blue_1" href="#" data-toggle="modal"
+                               data-target="#updateHomeWorkDialog" onclick="updateHomeWork(${item.homework_id})">
+                                <span>
+                                修改
+                                </span>
+                            </a>
+                            <a class="Btn_blue_1" href="#" onclick="deleteHomeWork(${item.homework_id})">
+                                <span >
+                                    删除
+                                </span>
                             </a>
                         </p>
                     </div>
@@ -365,7 +376,74 @@
 </div>
 </div>
 
-//添加作业
+
+
+
+
+
+<!--修改作业 -->
+<div class="modal fade" id="updateHomeWorkDialog" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="update">修改作业</h4>
+            </div>
+            <div class="modal-body">
+                <form action="${pageContext.request.contextPath}/updateHomeWork" method="post"  class="form-horizontal" id="update_HomeWork_form" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="new_HomeWorkName" class="col-sm-2 control-label">
+                            作业名称
+                        </label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="update_HomeWorkName"  name="homework_name" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="new_homeworkDes" class="col-sm-2 control-label">
+                            作业简介
+                        </label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="update_homeworkDes" placeholder="作业简介" name="homework_des" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="new_startTime" class="col-sm-2 control-label">
+                            作业开始时间
+                        </label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="update_startTime" placeholder="作业开始时间/格式：yyyy-MM-dd HH:mm:ss" name="start_time" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="new_endTime" class="col-sm-2 control-label">
+                            作业截止时间
+                        </label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="update_endTime" placeholder="作业截止时间/格式：yyyy-MM-dd HH:mm:ss" name="endTime" />
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button type="submit" class="btn btn-primary">创建课程</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<!--添加作业 -->
 <div class="modal fade" id="newHomeWorkDialog" tabindex="-1" role="dialog"
      aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
@@ -421,16 +499,37 @@
     </div>
 </div>
 <script>
-    function updateHomeWorkType(homework_id,homeworkType) {
-
-        <%--$.post("${pageContext.request.contextPath}/updateHomeWork",{"homework_id":homework_id},function (data) {--%>
-            <%--if (data=="OK"){--%>
-                <%--alert("SUCCESS");--%>
-                <%--window.location.reload();--%>
-            <%--}else {--%>
-                <%--alert("ERROR");--%>
-            <%--}--%>
-        <%--})--%>
+    function updateHomeWorkType(homework_id) {
+            $.post("${pageContext.request.contextPath}/updateHomeWorkType",{"homework_id":homework_id},function (data) {
+            if (data=="OK"){
+            alert("SUCCESS");
+            window.location.reload();
+            }else {
+            alert("ERROR");
+            }
+            })
+    }
+    function updateHomeWork(homework_id) {
+        console.log(homework_id);
+        $.post("${pageContext.request.contextPath}/toUpdateHomeWork",{"homework_id":homework_id},function (data) {
+            if (data){
+               console.log(data);
+               $("#update_HomeWorkName").val(data.homework_name);
+               $("#update_homeworkDes").val(data.homework_des);
+                $("#update_startTime").val(data.create_time);
+                $("#update_endTime").val(data.end_time);
+            }
+        })
+    }
+    function deleteHomeWork(homework_id) {
+        $.post("${pageContext.request.contextPath}/delectHomeWork",{"homework_id":homework_id},function (data) {
+            if (data==="OK"){
+                alert("SUCCESS");
+                window.location.reload();
+            }else {
+                alert("ERROR");
+            }
+        })
     }
 </script>
 </body>

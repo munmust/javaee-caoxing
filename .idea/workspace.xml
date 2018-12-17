@@ -7,23 +7,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="80c8c595-5596-4090-b721-3da483f3792e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Spring_4_3_18_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Spring_4_3_18_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/commons-fileupload-1.3.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/commons-io-2.4.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/json-20160810.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/springmvc_boot_crm_war_exploded/WEB-INF/jsp/Class/classDetail.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/springmvc_boot_crm_war_exploded/WEB-INF/lib/commons-fileupload-1.3.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/springmvc_boot_crm_war_exploded/WEB-INF/lib/commons-io-2.4.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/springmvc_boot_crm_war_exploded/WEB-INF/lib/json-20160810.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/springmvc_boot_crm_war_exploded/images/addkc_new.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/Class/HomeWork.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/Class/classDetail.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/addkc_new.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/springmvc_boot_crm_war_exploded/WEB-INF/classes/com/itheima/core/controller/ClassController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/springmvc_boot_crm_war_exploded/WEB-INF/classes/com/itheima/core/controller/ClassController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/springmvc_boot_crm_war_exploded/WEB-INF/classes/com/itheima/core/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/springmvc_boot_crm_war_exploded/WEB-INF/classes/com/itheima/core/dao/UserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/springmvc_boot_crm_war_exploded/WEB-INF/classes/com/itheima/core/dao/UserDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/springmvc_boot_crm_war_exploded/WEB-INF/classes/com/itheima/core/dao/UserDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/springmvc_boot_crm_war_exploded/WEB-INF/classes/com/itheima/core/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/springmvc_boot_crm_war_exploded/WEB-INF/classes/com/itheima/core/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/springmvc_boot_crm_war_exploded/WEB-INF/classes/com/itheima/core/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/springmvc_boot_crm_war_exploded/WEB-INF/classes/com/itheima/core/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/超星系统/com/itheima/core/controller/ClassController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/超星系统/com/itheima/core/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/超星系统/com/itheima/core/dao/UserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/超星系统/com/itheima/core/dao/UserDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/超星系统/com/itheima/core/dao/UserDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/超星系统/com/itheima/core/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/超星系统/com/itheima/core/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/超星系统/com/itheima/core/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/超星系统/com/itheima/core/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/itheima/core/controller/ClassController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itheima/core/controller/ClassController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/itheima/core/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itheima/core/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/itheima/core/dao/UserDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itheima/core/dao/UserDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/itheima/core/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itheima/core/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/itheima/core/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itheima/core/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/teacher.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/teacher.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -87,35 +83,36 @@
     <session id="-538734123">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="8" />
+          <entry key="project.closed" value="10" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.119" value="1" />
+          <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.16" value="2" />
           <entry key="project.open.time.17" value="2" />
           <entry key="project.open.time.178" value="1" />
           <entry key="project.open.time.18" value="1" />
-          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.28" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.63" value="1" />
-          <entry key="project.opened" value="15" />
+          <entry key="project.opened" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="4" />
           <entry key="css" value="2" />
-          <entry key="java" value="189" />
+          <entry key="java" value="221" />
           <entry key="jpg" value="1" />
           <entry key="js" value="1" />
-          <entry key="jsp" value="39" />
+          <entry key="jsp" value="49" />
           <entry key="properties" value="4" />
           <entry key="svg" value="1" />
           <entry key="tld" value="2" />
           <entry key="ttf" value="1" />
-          <entry key="xml" value="55" />
+          <entry key="xml" value="65" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -124,55 +121,60 @@
           <entry key="CSS" value="2" />
           <entry key="Font" value="1" />
           <entry key="Image" value="1" />
-          <entry key="JAVA" value="189" />
-          <entry key="JSP" value="39" />
+          <entry key="JAVA" value="221" />
+          <entry key="JSP" value="49" />
           <entry key="JavaScript" value="1" />
           <entry key="Properties" value="4" />
           <entry key="SVG" value="1" />
-          <entry key="XML" value="57" />
+          <entry key="XML" value="67" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="4" />
-          <entry key="java" value="10617" />
-          <entry key="jsp" value="6210" />
+          <entry key="dummy" value="11" />
+          <entry key="java" value="13427" />
+          <entry key="jsp" value="7340" />
           <entry key="properties" value="9" />
           <entry key="txt" value="14" />
-          <entry key="xml" value="3335" />
+          <entry key="xml" value="4252" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="10617" />
-          <entry key="JSP" value="6210" />
-          <entry key="PLAIN_TEXT" value="18" />
+          <entry key="JAVA" value="13427" />
+          <entry key="JSP" value="7340" />
+          <entry key="PLAIN_TEXT" value="25" />
           <entry key="Properties" value="9" />
           <entry key="SQL" value="37" />
-          <entry key="XML" value="3298" />
+          <entry key="XML" value="4215" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/itheima/core/service/UserService.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/Class/HomeWork.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="13" column="42" lean-forward="true" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
+            <state relative-caret-position="139">
+              <caret line="424" column="46" selection-start-line="424" selection-start-column="46" selection-end-line="424" selection-end-column="46" />
+              <folding>
+                <element signature="n#style#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#li#1;n#ul#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#1;n#li#1;n#ul#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/itheima/core/controller/ClassController.java">
+        <entry file="file://$PROJECT_DIR$/src/com/itheima/core/controller/HomeWorkController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="149" column="6" selection-start-line="149" selection-start-column="6" selection-end-line="149" selection-end-column="6" />
+            <state relative-caret-position="177">
+              <caret line="72" column="23" lean-forward="true" selection-start-line="72" selection-start-column="23" selection-end-line="72" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#addClass#0;class#ClassController#0" />
               </folding>
             </state>
           </provider>
@@ -181,17 +183,53 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/Class/classDetail.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="107" lean-forward="true" selection-start-line="9" selection-end-line="9" selection-end-column="107" />
+            <state relative-caret-position="181">
+              <caret line="555" column="53" selection-start-line="555" selection-start-column="8" selection-end-line="555" selection-end-column="53" />
+              <folding>
+                <element signature="e#18317#18651#0#HTML" />
+                <element signature="e#18688#19097#0#HTML" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/Class/Topic.jsp">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/itheima/core/dao/HomeWorkDao.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="209">
-              <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+              <caret line="11" column="36" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/itheima/core/service/HomeWorkSercice.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="172">
+              <caret line="11" column="36" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/itheima/core/po/HomeWork.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="48" column="9" lean-forward="true" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+              <folding>
+                <element signature="e#297#298#0" expanded="true" />
+                <element signature="e#333#334#0" expanded="true" />
+                <element signature="e#388#389#0" expanded="true" />
+                <element signature="e#438#439#0" expanded="true" />
+                <element signature="e#827#828#0" expanded="true" />
+                <element signature="e#862#863#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -202,9 +240,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="spring-beans.schema" />
+        <option value="Jsp File" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -217,20 +255,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/config/log4j.properties" />
-        <option value="$PROJECT_DIR$/src/com/itheima/core/service/impl/UserService.java" />
-        <option value="$PROJECT_DIR$/src/com/itheima/core/interceptor/LoginInterceptor.java" />
-        <option value="$PROJECT_DIR$/src/com/itheima/core/po/Customer.java" />
-        <option value="$PROJECT_DIR$/src/com/itheima/core/controller/BaseDictDao.java" />
-        <option value="$PROJECT_DIR$/src/com/itheima/common/utils/Page.java" />
-        <option value="$PROJECT_DIR$/src/com/itheima/core/po/BaseDict.java" />
-        <option value="$PROJECT_DIR$/src/com/itheima/core/dao/BaseDictDao.java" />
-        <option value="$PROJECT_DIR$/src/com/itheima/core/dao/BaseDictDao.xml" />
-        <option value="$PROJECT_DIR$/src/com/itheima/core/service/BaseDictService.java" />
-        <option value="$PROJECT_DIR$/src/com/itheima/core/service/impl/BaseDictServiceImpl.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/tld/commons.tld" />
-        <option value="$PROJECT_DIR$/src/com/itheima/core/controller/CustomerController.java" />
-        <option value="$PROJECT_DIR$/src/com/itheima/core/service/CustomerService.java" />
         <option value="$PROJECT_DIR$/src/com/itheima/core/service/impl/CustomerServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/com/itheima/core/dao/CustomerDao.java" />
         <option value="$PROJECT_DIR$/src/com/itheima/core/dao/CustomerDao.xml" />
@@ -257,15 +281,31 @@
         <option value="$PROJECT_DIR$/src/com/itheima/core/service/ClassService.java" />
         <option value="$PROJECT_DIR$/src/com/itheima/core/service/impl/ClassServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/com/itheima/core/dao/ClassDao.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/teacher.jsp" />
         <option value="$PROJECT_DIR$/src/com/itheima/core/po/User.java" />
         <option value="$PROJECT_DIR$/src/com/itheima/core/dao/UserDao.java" />
         <option value="$PROJECT_DIR$/src/com/itheima/core/dao/UserDao.xml" />
         <option value="$PROJECT_DIR$/src/com/itheima/core/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/com/itheima/core/service/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/com/itheima/core/controller/ClassController.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/Class/classDetail.jsp" />
+        <option value="$PROJECT_DIR$/src/com/itheima/core/po/Topic.java" />
+        <option value="$PROJECT_DIR$/src/com/itheima/core/po/TopicList.java" />
+        <option value="$PROJECT_DIR$/src/com/itheima/core/dao/Topic.java" />
+        <option value="$PROJECT_DIR$/src/com/itheima/core/dao/TopicDao.xml" />
+        <option value="$PROJECT_DIR$/src/com/itheima/core/dao/TopicDao.java" />
+        <option value="$PROJECT_DIR$/src/com/itheima/core/service/TopicService.java" />
+        <option value="$PROJECT_DIR$/src/com/itheima/core/service/impl/TopicServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/itheima/core/controller/TopicController.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/Class/Topic.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/teacher.jsp" />
+        <option value="$PROJECT_DIR$/src/com/itheima/core/po/Class_HomeWork.java" />
+        <option value="$PROJECT_DIR$/src/com/itheima/core/service/HomeWorkSercice.java" />
+        <option value="$PROJECT_DIR$/src/com/itheima/core/service/impl/HomeWorkServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/itheima/core/po/HomeWork.java" />
+        <option value="$PROJECT_DIR$/src/com/itheima/core/dao/HomeWorkDao.java" />
+        <option value="$PROJECT_DIR$/src/com/itheima/core/dao/HomeWorkDao.xml" />
+        <option value="$PROJECT_DIR$/src/com/itheima/core/controller/HomeWorkController.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/Class/classDetail.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/Class/HomeWork.jsp" />
       </list>
     </option>
   </component>
@@ -286,8 +326,8 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="952" />
-    <option name="width" value="977" />
+    <option name="x" value="885" />
+    <option name="width" value="1043" />
     <option name="height" value="1088" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -318,22 +358,15 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="超星系统" type="b2602c69:ProjectViewProjectNode" />
               <item name="超星系统" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="超星系统" type="b2602c69:ProjectViewProjectNode" />
-              <item name="超星系统" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="超星系统" type="b2602c69:ProjectViewProjectNode" />
-              <item name="超星系统" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="超星系统" type="b2602c69:ProjectViewProjectNode" />
@@ -431,15 +464,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544948505844" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545021055604" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/json-20160810.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -582,7 +612,9 @@
       <workItem from="1544620097961" duration="27078000" />
       <workItem from="1544692679726" duration="594000" />
       <workItem from="1544699204729" duration="58367000" />
-      <workItem from="1544937300835" duration="8680000" />
+      <workItem from="1544937300835" duration="17506000" />
+      <workItem from="1544969393472" duration="20000" />
+      <workItem from="1544969449692" duration="13990000" />
     </task>
     <task id="LOCAL-00001" summary="javaee-caoxing">
       <created>1544171398749</created>
@@ -626,11 +658,18 @@
       <option name="project" value="LOCAL" />
       <updated>1544884830297</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="javaee-caoxing">
+      <created>1544948523458</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1544948523458</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="184637000" />
+    <option name="totallyTimeSpent" value="207473000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -642,10 +681,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="762" y="0" width="781" height="870" extended-state="0" />
+    <frame x="708" y="0" width="834" height="870" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3416321" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21520619" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -662,7 +701,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32882273" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.3283582" />
       <window_info anchor="bottom" id="Spring" order="8" weight="0.3283582" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.25981057" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.25915876" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.3292683" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.3283582" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32971507" />
@@ -724,37 +763,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="javaee-caoxing" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/itheima/core/service/impl/CustomerServiceImpl.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/itheima/core/dao/CustomerDao.xml" />
-    <entry file="file://$PROJECT_DIR$/web/css/sb-admin-2.css" />
-    <entry file="file://$PROJECT_DIR$/web/js/bootstrap.min.js" />
-    <entry file="file://$PROJECT_DIR$/src/com/itheima/core/dao/CustomerDao.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/itheima/core/service/CustomerService.java" />
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/tld/commons.tld">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="23" column="27" lean-forward="true" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/itheima/core/controller/CustomerController.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/itheima/core/interceptor/LoginInterceptor.java" />
-    <entry file="file://$PROJECT_DIR$/config/resource.properties" />
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/customer.jsp" />
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/updateUser/updateUser.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="18" column="36" lean-forward="true" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/success.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
@@ -936,36 +944,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
           <caret line="10" column="29" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="29" />
-          <folding>
-            <element signature="e#317#318#0" expanded="true" />
-            <element signature="e#349#350#0" expanded="true" />
-            <element signature="e#400#401#0" expanded="true" />
-            <element signature="e#442#443#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/teacher.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="288" column="28" selection-start-line="288" selection-start-column="28" selection-end-line="288" selection-end-column="28" />
-          <folding>
-            <element signature="n#style#0;n#i#0;n#h3#0;n#div#1;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/itheima/core/dao/UserDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="73" column="51" lean-forward="true" selection-start-line="73" selection-start-column="51" selection-end-line="73" selection-end-column="51" />
-          <folding>
-            <element signature="n#sql#0;n#mapper#0;n#!!top" />
-            <element signature="n#select#0;n#mapper#0;n#!!top" />
-            <element signature="n#update#0;n#mapper#0;n#!!top" />
-            <element signature="n#select#3;n#mapper#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -983,6 +961,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/itheima/core/po/TopicList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="6" column="26" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="26" />
+          <folding>
+            <element signature="e#1645#1646#0" expanded="true" />
+            <element signature="e#1678#1679#0" expanded="true" />
+            <element signature="e#1727#1728#0" expanded="true" />
+            <element signature="e#1771#1772#0" expanded="true" />
+            <element signature="e#1805#1806#0" expanded="true" />
+            <element signature="e#1835#1836#0" expanded="true" />
+            <element signature="e#1881#1882#0" expanded="true" />
+            <element signature="e#1919#1920#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/itheima/core/dao/TopicDao.xml" />
+    <entry file="file://$PROJECT_DIR$/src/com/itheima/core/dao/TopicDao.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/itheima/core/service/TopicService.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/itheima/core/service/impl/TopicServiceImpl.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/itheima/core/controller/TopicController.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/itheima/core/controller/ClassController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="125" column="92" selection-start-line="125" selection-start-column="92" selection-end-line="125" selection-end-column="92" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#addMoreStudentToClass#0;class#ClassController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/itheima/core/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -990,28 +1001,129 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/itheima/core/controller/ClassController.java">
+    <entry file="file://$PROJECT_DIR$/src/com/itheima/core/po/Class_HomeWork.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="149" column="6" selection-start-line="149" selection-start-column="6" selection-end-line="149" selection-end-column="6" />
+        <state relative-caret-position="95">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="e#145#146#0" expanded="true" />
+            <element signature="e#176#177#0" expanded="true" />
+            <element signature="e#221#222#0" expanded="true" />
+            <element signature="e#261#262#0" expanded="true" />
+            <element signature="e#296#297#0" expanded="true" />
+            <element signature="e#330#331#0" expanded="true" />
+            <element signature="e#381#382#0" expanded="true" />
+            <element signature="e#427#428#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/teacher.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="25" column="11" lean-forward="true" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/itheima/core/dao/UserDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="25" column="83" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="83" />
+          <folding>
+            <element signature="n#sql#0;n#mapper#0;n#!!top" />
+            <element signature="n#select#0;n#mapper#0;n#!!top" />
+            <element signature="n#select#3;n#mapper#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/itheima/core/po/HomeWork.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="48" column="9" lean-forward="true" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+          <folding>
+            <element signature="e#297#298#0" expanded="true" />
+            <element signature="e#333#334#0" expanded="true" />
+            <element signature="e#388#389#0" expanded="true" />
+            <element signature="e#438#439#0" expanded="true" />
+            <element signature="e#827#828#0" expanded="true" />
+            <element signature="e#862#863#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/itheima/core/service/HomeWorkSercice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="11" column="36" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#addClass#0;class#ClassController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/itheima/core/dao/HomeWorkDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="36" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/itheima/core/dao/HomeWorkDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="16" column="13" lean-forward="true" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/itheima/core/service/impl/HomeWorkServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#811#812#0" expanded="true" />
+            <element signature="e#874#875#0" expanded="true" />
+            <element signature="e#945#946#0" expanded="true" />
+            <element signature="e#1009#1010#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/itheima/core/controller/HomeWorkController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="72" column="23" lean-forward="true" selection-start-line="72" selection-start-column="23" selection-end-line="72" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/Class/classDetail.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="107" lean-forward="true" selection-start-line="9" selection-end-line="9" selection-end-column="107" />
+        <state relative-caret-position="181">
+          <caret line="555" column="53" selection-start-line="555" selection-start-column="8" selection-end-line="555" selection-end-column="53" />
+          <folding>
+            <element signature="e#18317#18651#0#HTML" />
+            <element signature="e#18688#19097#0#HTML" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/Class/Topic.jsp">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/Class/HomeWork.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+        <state relative-caret-position="139">
+          <caret line="424" column="46" selection-start-line="424" selection-start-column="46" selection-end-line="424" selection-end-column="46" />
+          <folding>
+            <element signature="n#style#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#li#1;n#ul#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#1;n#li#1;n#ul#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

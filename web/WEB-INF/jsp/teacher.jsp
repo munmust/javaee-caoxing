@@ -317,6 +317,8 @@
     </div>
     </div>
 </div>
+
+//添加课程
 <div class="modal fade" id="newCustomerDialog" tabindex="-1" role="dialog"
      aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
@@ -334,7 +336,7 @@
                             课程名称
                         </label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="new_className" placeholder="课程名称" name="class_name" />
+                            <input type="text" class="form-control" id="new_className" placeholder="课程名称" name="homework_name" />
                         </div>
                     </div>
                     <div class="form-group">

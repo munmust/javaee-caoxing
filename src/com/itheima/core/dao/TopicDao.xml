@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itheima.core.dao.TopicDao">
+    <sql id="selectTopicListWhere">
+        <where>
+            <if test="topic_name !=null">
+                topic_name like "%"#{topic_name}"%"
+            </if>
+            <if test="topic_des !=null">
+                and topic_des=#{topic_des}
+            </if>
+        </where>
+    </sql>
+    <select id="findAllTopic" parameterType="int" resultType="TopicList">
+        select * from topics where topic_id in (select topic_id from homework_topic where homework_id=#{homework_id})
+    </select>
+    <select id="findAllTopicChoice" parameterType="int" resultType="TopicList">
+        select * from topics where topic_type=1 and topic_id in (select topic_id from homework_topic where homework_id=#{homework_id})
+    </select>
+    <select id="findAllTopicText" resultType="TopicList">
+        select * from topics where topic_type=2 and topic_id in (select topic_id from homework_topic where homework_id=#{homework_id})
+    </select>
+    <select id="findAllTopicDoc" resultType="TopicList">
+        select * from topics where topic_type=3 and topic_id in (select topic_id from homework_topic where homework_id=#{homework_id})
+    </select>
+    <select id="findTopicByObject" parameterType="TopicList" resultType="TopicList">
+        select * from topics where topic_name=#{topic_name} and  topic_des=#{topic_des}
+    </select>
+    <select id="findTopicById" parameterType="int" resultType="TopicList">
+        select * from topics where topic_id=#{topic_id}
+    </select>
+    <insert id="addTopic" parameterType="TopicList">
+        insert into topics(topic_name,topic_des,topic_type,topic_A,topic_B,topic_C,topic_D,topic_text,topic_answer) values (#{topic_name},#{topic_des},#{topic_type},#{topic_A},#{topic_B},#{topic_C},#{topic_D},#{topic_text},#{topic_answer})
+    </insert>
+    <insert id="addHomeWork_Topic" parameterType="HomeWork_Topic">
+        insert into homework_topic(homework_id,topic_id) values (#{homework_id},#{topic_id})
+    </insert>
+    <delete id="deleteTopicWithHomeWork" parameterType="HomeWork_Topic">
+        delete from homework_topic where homework_id=#{homework_id} and topic_id=#{topic_id}
+    </delete>
+
+    <select id="selectAllTopic" parameterType="TopicList" resultType="TopicList">
+        select
+        topic_id,
+        topic_name,
+        topic_des,
+        topic_type
+        from topics where topic_id not in (select topic_id from homework_topic where homework_id=#{linkHomeWork})
+        <include refid="selectTopicListWhere"/>
+        <if test="start !=null and rows != null">
+            limit #{start},#{rows}
+        </if>
+    </select>
+    <select id="selectAllTopicCount" resultType="Integer">
+        select count(*) from topics
+        <include refid="selectTopicListWhere"/>
+    </select>
+<select id="findTopicBy" parameterType="int" resultType="TopicList">
+    select * from topics where topic_id=#{topic_id}
+</select>
+</mapper>

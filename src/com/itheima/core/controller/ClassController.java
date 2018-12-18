@@ -126,10 +126,7 @@ public class ClassController {
      String studentList=request.getParameter("student");
      String[] s=null;
      s=studentList.split("-");
-     for (int i=0;i<s.length;i++){
-         System.out.println(s[i]);
-     }
-       ClassList classList= (ClassList) httpSession.getAttribute("ClassList");
+     ClassList classList= (ClassList) httpSession.getAttribute("ClassList");
      User_Class user_class=new User_Class();
      user_class.setClass_id(classList.getClass_id());
      int count=0;

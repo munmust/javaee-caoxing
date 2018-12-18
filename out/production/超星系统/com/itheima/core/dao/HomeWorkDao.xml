@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itheima.core.dao.HomeWorkDao">
+    <select id="findAllHomeWork" parameterType="int" resultType="HomeWork">
+        select * from homework where homework_id in (select homework_id from class_homework where class_id=#{class_id})
+    </select>
+    <insert id="addHomeWork" parameterType="HomeWork">
+        insert into homework(homework_name,homework_des,create_time,end_time,homework_type) values (#{homework_name},#{homework_des},#{create_time},#{end_time},0)
+    </insert>
+
+    <select id="findHomeWorkByName" parameterType="String" resultType="HomeWork">
+        select * from homework where homework_name=#{homework_name}
+    </select>
+    <select id="findHomeWorkById" parameterType="int" resultType="HomeWork">
+        select * from homework where homework_id=#{homework_id}
+    </select>
+    <insert id="addClass_HomeWork" parameterType="Class_HomeWork">
+        insert into class_homework(homework_id,class_id) values (#{homework_id},#{class_id})
+    </insert>
+    <update id="updateHomeWorkType" parameterType="HomeWork">
+        update homework set homework_name=#{homework_name},homework_des=#{homework_des},create_time=#{create_time},end_time=#{end_time},homework_type=#{homework_type} where homework_id=#{homework_id}
+         </update>
+    <delete id="deleteHomeWork" parameterType="int">
+        delete  from homework where homework_id=#{homework_id}
+    </delete>
+    <delete id="deleteClass_Home" parameterType="Class_HomeWork">
+        delete  from class_homework where class_id=#{class_id} and homework_id=#{homework_id}
+    </delete>
+</mapper>

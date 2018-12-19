@@ -1,9 +1,7 @@
 package com.itheima.core.service.impl;
 
 import com.itheima.core.dao.HomeWorkDao;
-import com.itheima.core.po.Class_HomeWork;
-import com.itheima.core.po.HomeWork;
-import com.itheima.core.po.User;
+import com.itheima.core.po.*;
 import com.itheima.core.service.HomeWorkSercice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,6 +14,11 @@ public class HomeWorkServiceImpl implements HomeWorkSercice {
     @Override
     public List<HomeWork> findAllHomeWork(int class_id) {
         return homeWorkDao.findAllHomeWork(class_id);
+    }
+
+    @Override
+    public List<HomeWork> findOpenHomeWork(int class_id) {
+        return homeWorkDao.findOpenHomeWork(class_id);
     }
 
     @Override
@@ -52,4 +55,16 @@ public class HomeWorkServiceImpl implements HomeWorkSercice {
     public int deleteClass_Home(Class_HomeWork class_homeWork) {
         return homeWorkDao.deleteClass_Home(class_homeWork);
     }
+
+    @Override
+    public int AllStudentCount(int class_id) {
+        return homeWorkDao.AllStudentCount(class_id);
+    }
+
+    @Override
+    public int HomeWorkOk(HomeWorkOK homeWorkOK) {
+        return homeWorkDao.HomeWorkOk(homeWorkOK);
+    }
+
+
 }

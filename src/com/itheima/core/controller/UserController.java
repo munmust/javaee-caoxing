@@ -22,6 +22,7 @@ public class UserController {
     @RequestMapping(value = "/login",method = RequestMethod.POST)
     public String login(String user_code,String user_password,Model model,HttpSession httpSession){
         User user=userService.findUser(user_code,user_password);
+        System.out.println(user.toString());
         if (user==null){
             model.addAttribute("error","账号或密码错误");
             return "login";
@@ -29,6 +30,7 @@ public class UserController {
             List<ClassList> classLists=classService.selectAllClass(user.getUser_id());
             System.out.println(classLists);
             httpSession.setAttribute("User",user);
+            model.addAttribute("ClassList",classLists);
             return "student";
         }
         List<ClassList> classLists=classService.selectAllClass(user.getUser_id());
@@ -52,6 +54,6 @@ public class UserController {
         user.setUser_password(user_new_password);
         System.out.println(user.toString());
         userService.updateUser(user);
-        return "success";
+        return "login";
     }
 }

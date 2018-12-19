@@ -414,15 +414,15 @@
                 <td>${row.user_name}</td>
                 <td>${row.user_cls}</td>
                 <td>
-                    <a href="#" class="btn btn-danger btn-xs" >退课</a>
+                    <a href="#" class="btn btn-danger btn-xs" onclick="deleteStudentToClass(${row.user_id})" >退课</a>
                 </td>
             </tr>
         </c:forEach>
         </tbody>
     </table>
-    <div class="col-md-12 text-right">
-        <itheima:page url="${pageContext.request.contextPath }/toClassDetail" />
-    </div>
+        <div class="col-md-12 text-right">
+            <itheima:page url="${pageContext.request.contextPath }/toClassDetail" />
+        </div>
     </div>
 </div>
 
@@ -595,6 +595,19 @@
             <%--}--%>
         <%--});--%>
     <%--}--%>
+    function deleteStudentToClass(id) {
+        $.post("${pageContext.request.contextPath}/deleteStudentToClass",{"id":id},
+            function (data) {
+                if (data==="OK"){
+                    alert("OK");
+                    window.location.reload();
+                } else {
+                    alert("ERROR");
+                    window.location.reload();
+                }
+            }
+        )
+    }
 </script>
 </body>
 </html>

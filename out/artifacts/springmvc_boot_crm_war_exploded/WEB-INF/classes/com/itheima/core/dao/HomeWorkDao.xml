@@ -5,6 +5,9 @@
     <select id="findAllHomeWork" parameterType="int" resultType="HomeWork">
         select * from homework where homework_id in (select homework_id from class_homework where class_id=#{class_id})
     </select>
+    <select id="findOpenHomeWork" parameterType="int" resultType="HomeWork">
+        select * from homework where homework_type=1 and homework_id in (select homework_id from class_homework where class_id=#{class_id})
+    </select>
     <insert id="addHomeWork" parameterType="HomeWork">
         insert into homework(homework_name,homework_des,create_time,end_time,homework_type) values (#{homework_name},#{homework_des},#{create_time},#{end_time},0)
     </insert>
@@ -27,4 +30,10 @@
     <delete id="deleteClass_Home" parameterType="Class_HomeWork">
         delete  from class_homework where class_id=#{class_id} and homework_id=#{homework_id}
     </delete>
+    <select id="AllStudentCount" parameterType="int" resultType="int">
+        select count(*) from user_class where class_id=#{class_id} and user_class_type=1
+    </select>
+    <select id="HomeWorkOk" parameterType="HomeWorkOK" resultType="int">
+        select count(*) from homeworkok where homework_id=#{homework_id} and class_id=#{class_id} and homework_ok=1
+    </select>
 </mapper>

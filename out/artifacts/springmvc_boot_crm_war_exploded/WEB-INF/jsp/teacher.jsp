@@ -288,7 +288,7 @@
     <ul class="class_list" >
     <c:forEach items="${ClassList}" var="item" varStatus="status">
 
-        <li id="${item.class_id}" style="position:relative" onclick="clickClass(${item.class_id})">
+        <li id="${item.class_id}" style="position:relative" >
             <div class="Mcon1img httpsClass">
                 <a href="#">
                     <img src="#" width="270" height="169">
@@ -296,15 +296,16 @@
             </div>
             <div class="Mconright httpsClass">
                 <h3 class="clearfix">
-                    <a href="#" title="${item.class_name}">${item.class_name}</a>
+                    <a href="#" onclick="clickClass(${item.class_id})" style="cursor: pointer" title="${item.class_name}">${item.class_name}</a>
                     <i style="display: block;"> </i>
                 </h3>
                 <p></p>
-                <p> ${item.create_user_name} </p>
+                <p > ${item.create_user_name} </p>
                 <p>${item.class_des}</p>
                 <p class="Mconrightp3" style="display:none;">
                 </p>
             </div>
+            <span style="cursor: pointer" onclick="deleteClass(${item.class_id})">删除</span>
         </li>
     </c:forEach>
         <li>
@@ -318,7 +319,7 @@
     </div>
 </div>
 
-//添加课程
+<%--添加课程--%>
 <div class="modal fade" id="newCustomerDialog" tabindex="-1" role="dialog"
      aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
@@ -336,7 +337,7 @@
                             课程名称
                         </label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="new_className" placeholder="课程名称" name="homework_name" />
+                            <input type="text" class="form-control" id="new_className" placeholder="课程名称" name="class_name" />
                         </div>
                     </div>
                     <div class="form-group">
@@ -376,6 +377,17 @@
                 window.location="${pageContext.request.contextPath}"+data;
             }
         })
+    }
+    function deleteClass(class_id) {
+        $.post("${pageContext.request.contextPath}/deleteClass",{"id":class_id},
+            function (data) {
+                if (data=="OK"){
+                    alert("SUCCESS");
+                    window.location.reload();
+                } else {
+                    alert("ERROR")
+                }
+            })
     }
 </script>
 </body>

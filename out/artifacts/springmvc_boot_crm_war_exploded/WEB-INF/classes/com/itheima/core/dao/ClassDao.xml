@@ -21,4 +21,11 @@
     <insert id="addStudentToClass" parameterType="User_Class">
         insert into user_class(user_id,class_id,user_class_type) values (#{user_id},#{class_id},1)
     </insert>
+
+    <delete id="deleteClass" parameterType="User_Class">
+        delete from user_class where class_id=#{class_id} and user_id=${user_id}
+    </delete>
+    <delete id="deleteStudent" parameterType="User_Class">
+        delete from user_class where class_id=#{class_id} and user_id=#{user_id}
+    </delete>
 </mapper>

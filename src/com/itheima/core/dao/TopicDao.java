@@ -1,5 +1,6 @@
 package com.itheima.core.dao;
 
+import com.itheima.core.po.HomeWorkOK;
 import com.itheima.core.po.HomeWork_Topic;
 import com.itheima.core.po.TopicList;
 
@@ -17,4 +18,5 @@ public interface TopicDao {
     public int addHomeWork_Topic(HomeWork_Topic homeWork_topic);
     public List<TopicList> selectAllTopic(TopicList topicList);
     public Integer selectAllTopicCount(TopicList topicList);
+    public int homeworkOK(HomeWorkOK homeWorkOK);
 }

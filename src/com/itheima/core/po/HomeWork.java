@@ -9,6 +9,24 @@ public class HomeWork {
     private Date create_time;
     private Date end_time;
     private int homework_type;
+    private int allstudent;
+    private int homeworkok;
+
+    public int getAllstudent() {
+        return allstudent;
+    }
+
+    public void setAllstudent(int allstudent) {
+        this.allstudent = allstudent;
+    }
+
+    public int getHomeworkok() {
+        return homeworkok;
+    }
+
+    public void setHomeworkok(int homeworkok) {
+        this.homeworkok = homeworkok;
+    }
 
     public int getHomework_type() {
         return homework_type;

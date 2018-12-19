@@ -219,6 +219,10 @@
             <c:otherwise>班级：${User.user_cls}</c:otherwise>
         </c:choose></span>
     </p>
+    <h2>
+        <span>已交人数:</span><span>${homeworkOK}</span><span>/</span>
+        <span>${AllStudent}</span>
+    </h2>
 </div>
 <a style="color: #2e6da4;text-decoration: none" href="#"data-toggle="modal"
    data-target="#newTopicDialog"  >新增题目</a>

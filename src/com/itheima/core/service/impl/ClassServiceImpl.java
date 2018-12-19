@@ -43,4 +43,14 @@ public class ClassServiceImpl implements ClassService {
     public int addStudentToClass(User_Class user_class) {
         return classDao.addStudentToClass(user_class);
     }
+
+    @Override
+    public int deleteClass(User_Class user_class) {
+        return classDao.deleteClass(user_class);
+    }
+
+    @Override
+    public int deleteStudent(User_Class user_class) {
+        return classDao.deleteStudent(user_class);
+    }
 }

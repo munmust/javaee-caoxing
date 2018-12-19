@@ -15,4 +15,6 @@ public interface ClassService {
     public ClassList findClassById(int class_id);
 
     public int addStudentToClass(User_Class user_class);
+    public int deleteClass(User_Class user_class);
+    public int deleteStudent(User_Class user_class);
 }

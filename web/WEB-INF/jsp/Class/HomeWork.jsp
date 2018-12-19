@@ -317,10 +317,11 @@
             <li>
                 <a href="#" title="待批作业">待批作业</a>
             </li>
+
         </ul>
     </div>
     <a style="color: #2e6da4;text-decoration: none" href="#"data-toggle="modal"
-       data-target="#newHomeWorkDialog"  >添加课程</a>
+       data-target="#newHomeWorkDialog"  >添加作业</a>
     <!--列表内容开始-->
     <div class="ulDiv">
         <ul class="clearfix" style="*width:1020px;">
@@ -338,6 +339,7 @@
                                                             <c:when test="${item.homework_type eq 0}">未发布</c:when>
                                                             <c:otherwise>已发布</c:otherwise>
                                                             </c:choose></strong></span>
+
                     </div>
                     <div class="titOper" style="width: 300px; display: flex; flex-direction: row;justify-content: space-around">
                     <span style="color:red;font-weight:bold;font-size:18px;line-height:45px;" >

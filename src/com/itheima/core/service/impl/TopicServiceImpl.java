@@ -2,6 +2,7 @@ package com.itheima.core.service.impl;
 
 import com.itheima.common.utils.Page;
 import com.itheima.core.dao.TopicDao;
+import com.itheima.core.po.HomeWorkOK;
 import com.itheima.core.po.HomeWork_Topic;
 import com.itheima.core.po.TopicList;
 import com.itheima.core.service.TopicService;
@@ -81,6 +82,11 @@ public class TopicServiceImpl implements TopicService {
         result.setSize(rows);
         result.setTotal(count);
         return result;
+    }
+
+    @Override
+    public int homeworkOK(HomeWorkOK homeWorkOK) {
+        return topicDao.homeworkOK(homeWorkOK);
     }
 
 

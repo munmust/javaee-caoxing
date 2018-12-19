@@ -1,8 +1,6 @@
 package com.itheima.core.controller;
 
-import com.itheima.core.po.ClassList;
-import com.itheima.core.po.Class_HomeWork;
-import com.itheima.core.po.HomeWork;
+import com.itheima.core.po.*;
 import com.itheima.core.service.HomeWorkSercice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,16 +19,18 @@ import java.util.List;
 public class HomeWorkController {
     @Autowired
     HomeWorkSercice homeWorkSercice;
-
     @RequestMapping("/toHomeWork")
     public String toHomeWork(Model model, HttpSession httpSession) {
         ClassList classList = (ClassList) httpSession.getAttribute("ClassList");
+        User user= (User) httpSession.getAttribute("User");
         model.addAttribute("Class", classList);
-        System.out.println(classList);
         List<HomeWork> homeWorks = homeWorkSercice.findAllHomeWork(classList.getClass_id());
-        System.out.println(homeWorks);
-        System.out.println(classList.getClass_id());
         model.addAttribute("HomeWorkList", homeWorks);
+        List<HomeWork> studentHomeWork=homeWorkSercice.findOpenHomeWork(classList.getClass_id());
+        model.addAttribute("OpenHomeWork",studentHomeWork);
+        if (user.getUser_type()==1){
+            return "Student/StudentHomeWork";
+        }
         return "Class/HomeWork";
     }
 

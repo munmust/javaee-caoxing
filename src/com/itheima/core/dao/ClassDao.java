@@ -15,5 +15,6 @@ public interface ClassDao {
     public ClassList findClassById(int class_id);
     public int addUser_Class(User_Class user_class);
     public int addStudentToClass(User_Class user_class);
-
+    public int deleteClass(User_Class user_class);
+    public int deleteStudent(User_Class user_class);
 }

@@ -12,10 +12,7 @@ import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -89,12 +86,15 @@ public class ClassController {
         ClassList classList=classService.findClassById(class_ids);
         System.out.println(classList);
         session.setAttribute("ClassList",classList);
+        User user= (User) session.getAttribute("User");
+        if (user.getUser_type()==1){
+            return "/toStudentClassDetail";
+        }
         return "/toClassDetail";
+
     }
     @RequestMapping("/toClassDetail")
     public String toClassDetail(Model model,HttpSession session,@RequestParam(defaultValue = "1") Integer page, @RequestParam(defaultValue = "10") Integer rows,String user_code,String user_name, String user_cls){
-
-
         ClassList classList=(ClassList)session.getAttribute("ClassList");
         model.addAttribute("Class",classList);
         int linkClass=classList.getClass_id();
@@ -103,6 +103,12 @@ public class ClassController {
         model.addAttribute("Student",userPage);
         model.addAttribute("NotInClass",notInClass);
         return "Class/classDetail";
+    }
+    @RequestMapping("/toStudentClassDetail")
+    public String toStudentClassDetail(Model model,HttpSession session){
+        ClassList classList=(ClassList)session.getAttribute("ClassList");
+        model.addAttribute("Class",classList);
+        return "Student/StudentClassDetail";
     }
     @RequestMapping("/addStudentToClass")
     @ResponseBody
@@ -144,5 +150,37 @@ public class ClassController {
      }else {
          return "False";
      }
+    }
+    @RequestMapping("/deleteStudentToClass")
+    @ResponseBody
+    public String deleteStudentToClass(HttpServletRequest httpServletRequest,HttpSession httpSession){
+        String s=httpServletRequest.getParameter("id");
+        int user_id=Integer.valueOf(s);
+        ClassList classList=(ClassList)httpSession.getAttribute("ClassList");
+        User_Class user_class=new User_Class();
+        user_class.setClass_id(classList.getClass_id());
+        user_class.setUser_id(user_id);
+        System.out.println(user_class.toString());
+        int rows=classService.deleteStudent(user_class);
+        if (rows>0){
+            return "OK";
+        }
+        return "False";
+    }
+    @RequestMapping("/deleteClass")
+    @ResponseBody
+    public String deleteClass(HttpSession httpSession,HttpServletRequest httpServletRequest){
+        String s=httpServletRequest.getParameter("id");
+        int class_id=Integer.valueOf(s);
+        User user= (User) httpSession.getAttribute("User");
+        User_Class user_class=new User_Class();
+        user_class.setUser_id(user.getUser_id());
+        user_class.setClass_id(class_id);
+        int rows=classService.deleteClass(user_class);
+        if (rows>0){
+            return "OK";
+        }else {
+            return "False";
+        }
     }
 }

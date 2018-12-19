@@ -1,10 +1,7 @@
 package com.itheima.core.controller;
 
 import com.itheima.common.utils.Page;
-import com.itheima.core.po.HomeWork;
-import com.itheima.core.po.HomeWork_Topic;
-import com.itheima.core.po.TopicList;
-import com.itheima.core.po.User;
+import com.itheima.core.po.*;
 import com.itheima.core.service.HomeWorkSercice;
 import com.itheima.core.service.TopicService;
 import org.apache.tools.ant.util.LeadPipeInputStream;
@@ -38,6 +35,14 @@ public class TopicController {
         HomeWork homeWork= (HomeWork) httpSession.getAttribute("NowHomeWork");
         int linkHomeWork=homeWork.getHomework_id();
         User user= (User) httpSession.getAttribute("User");
+        ClassList classList= (ClassList) httpSession.getAttribute("ClassList");
+        int allCount=homeWorkSercice.AllStudentCount(classList.getClass_id());
+        model.addAttribute("AllStudent",allCount);
+        HomeWorkOK homeWorkOK=new HomeWorkOK();
+        homeWorkOK.setHomework_id(homeWork.getHomework_id());
+        homeWorkOK.setClass_id(classList.getClass_id());
+        int homeworkOK=homeWorkSercice.HomeWorkOk(homeWorkOK);
+        model.addAttribute("homeworkOK",homeworkOK);
         List<TopicList> topicLists=topicService.findAllTopic(homeWork.getHomework_id());
         System.out.println(topicLists);
         List<TopicList> Choice=topicService.findAllTopicChoice(homeWork.getHomework_id());
@@ -48,6 +53,9 @@ public class TopicController {
         model.addAttribute("Doc",Doc);
         Page<TopicList>  allTopic=topicService.selectAllTopic(page,rows,topic_name,topic_des,linkHomeWork);
         model.addAttribute("AllTopic",allTopic);
+        if (user.getUser_type()==1){
+            return "Student/StudentTopic";
+        }
         return "Class/Topic";
     }
 
@@ -129,4 +137,24 @@ public class TopicController {
         }
     }
 
+
+    @RequestMapping("/homeworkOK")
+    @ResponseBody
+    public String homeworkOK(HttpSession session,HttpServletRequest httpServletRequest){
+        String s=httpServletRequest.getParameter("id");
+        int homework_id=Integer.valueOf(s);
+        ClassList classList= (ClassList) session.getAttribute("ClassList");
+        User user= (User) session.getAttribute("User");
+        HomeWorkOK homeWorkOK=new HomeWorkOK();
+        homeWorkOK.setClass_id(classList.getClass_id());
+        homeWorkOK.setHomework_id(homework_id);
+        homeWorkOK.setUser_id(user.getUser_id());
+        System.out.println(homeWorkOK.toString());
+        int row =topicService.homeworkOK(homeWorkOK);
+        if (row>0){
+            return "OK";
+        }
+        return "False";
+
+    }
 }

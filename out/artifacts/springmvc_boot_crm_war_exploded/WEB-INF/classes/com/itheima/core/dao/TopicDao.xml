@@ -59,4 +59,7 @@
 <select id="findTopicBy" parameterType="int" resultType="TopicList">
     select * from topics where topic_id=#{topic_id}
 </select>
+    <insert id="homeworkOK" parameterType="HomeWorkOk">
+        insert into homeworkok(user_id,class_id,homework_id,homework_ok) values (#{user_id},#{class_id},#{homework_id},1)
+    </insert>
 </mapper>
